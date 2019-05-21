@@ -186,11 +186,6 @@ module "kubernetes_dashboard" {
   kubeconfig_path = "${local_file.kubeconfig.filename}"
 }
 
-module "postgre" {
-  source          = "postgres-with-pvc"
-  kubeconfig_path = "${module.efk.kubeconfig_path}"
-}
-
 module "metric_server" {
   source          = "metric-server"
   kubeconfig_path = "${local_file.kubeconfig.filename}"
