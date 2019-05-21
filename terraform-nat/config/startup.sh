@@ -62,6 +62,8 @@ chmod 400 ~/master.pem
 
 sleep 150
 
+mkdir ~/.ssh
+
 ssh-keyscan -H "${master_ip}" >> ~/.ssh/known_hosts
 
 
